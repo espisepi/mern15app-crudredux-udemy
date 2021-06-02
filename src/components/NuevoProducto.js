@@ -17,7 +17,7 @@ const NuevoProducto = () => {
     const agregarProducto = (producto) => dispatch( crearNuevoProductoAction(producto) );
 
     /* Cuando el usuario haga submit */
-    const submitNuevoProducto = useCallback( (e) => {
+    const submitNuevoProducto = (e) => {
             e.preventDefault();
 
             /* validar formulario */
@@ -33,7 +33,7 @@ const NuevoProducto = () => {
                 precio
             });
 
-        }, [] )
+    };
 
     return (
         <div className="row justify-content-center">
