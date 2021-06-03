@@ -69,6 +69,12 @@ export function obtenerProductosAction() {
         try {
             const respuesta = await clienteAxios.get('/productos');
             dispatch( descargaProductosExitosa(respuesta.data) );
+
+            // Para probar el mensaje de cargando... en la vista de productos
+            // setTimeout( async () => {
+            //     const respuesta = await clienteAxios.get('/productos');
+            //     dispatch( descargaProductosExitosa(respuesta.data) );
+            // }, 3000);
         } catch ( error ) {
             console.log(error);
             dispatch( descargaProductosError() );
